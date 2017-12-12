@@ -20,7 +20,7 @@ def requirements():
 setup(
 	name='smsactivateru',
 	version='1.0',
-	description='Wrapper for automatic reception of SMS-messages by sms-activate.ru',
+	description='Wrapper for automatic reception of SMS-messages with sms-activate.ru API',
 	author='tezmen',
 	license='Apache License, Version 2.0, see LICENSE file',
 	keywords='sms, revice, sms-activate-ru, autoreg',
