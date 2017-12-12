@@ -18,7 +18,7 @@ $ python setup.py install
 ```python
 from smsactivateru import Sms, SmsService, GetNumber
 
-wrapper = Sms('API KEY')
+wrapper = Sms('API KEY', 'http://sms-activate.api.5sim.net/stubs/handler_api.php')
 
 activation = GetNumber(
 	service=SmsService().Youla,
