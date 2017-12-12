@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import logging
 import time
 import smsactivateru
 
@@ -25,6 +26,7 @@ class SmsActivation:
 		while True:
 			time.sleep(1)
 			response = smsactivateru.GetStatus(id=self.__id).request(wrapper)
+			logging.debug("Response from sms-activate: %s", str(response))
 			if response['code']:
 				code = response['code']
 				smsactivateru.SetStatus(
