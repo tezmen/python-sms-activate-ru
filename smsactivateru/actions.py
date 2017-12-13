@@ -37,7 +37,10 @@ class GetFreeSlots(ActionsModel):
 
 		service_obj = SmsService()
 		for name, short_name in ServiceStorage.names.items():
-			getattr(service_obj, name).count = int(service_list[short_name])
+			try:
+				getattr(service_obj, name).count = int(service_list[short_name])
+			except:
+				pass
 		return service_obj
 
 	def request(self, wrapper):
