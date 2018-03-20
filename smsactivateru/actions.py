@@ -79,8 +79,8 @@ class GetStatus(ActionsModel):
 	def __response_processing(self, response):
 		data = {'status': response, 'code': None}
 		if ':' in response:
-			data['status'] = response.split(':')[0]
-			data['code'] = response.split(':')[1]
+			data['status'] = response.split(':', 1)[0]
+			data['code'] = response.split(':', 1)[1]
 		return data
 
 	def request(self, wrapper):
