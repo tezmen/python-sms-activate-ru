@@ -7,3 +7,4 @@ dist/
 *.pyc
 .pypirc
 *.egg-info
+/venv

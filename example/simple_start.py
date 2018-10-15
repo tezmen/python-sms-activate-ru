@@ -17,7 +17,8 @@ print('На счету {} руб.'.format(balance))
 
 # getting free slots (count available phone numbers for each services)
 available_phones = GetFreeSlots(
-	country=SmsTypes.Country.RU
+	country=SmsTypes.Country.RU,
+	operator=SmsTypes.Operator.TELE2
 ).request(wrapper)
 # show for vk.com, whatsapp and youla.io)
 print('vk.com: {} номеров'.format(available_phones.VkCom.count))
