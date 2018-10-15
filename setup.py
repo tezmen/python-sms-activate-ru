@@ -19,7 +19,7 @@ def requirements():
 
 setup(
 	name='smsactivateru',
-	version='1.0',
+	version='1.1',
 	description='Wrapper for automatic reception of SMS-messages by sms-activate.ru',
 	author='tezmen',
 	license='Apache License, Version 2.0, see LICENSE file',
@@ -37,6 +37,7 @@ setup(
 		'Programming Language :: Python',
 		'Programming Language :: Python :: 3.5',
 		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.7',
 		'Programming Language :: Python :: Implementation :: PyPy',
 	]
 )
