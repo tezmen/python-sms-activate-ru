@@ -25,15 +25,16 @@ class SmsTypes:
         NG = '17'  # Нигерия (Nigeria)
         MO = '17'  # Макао (Macau)
 
+    class Status:
+        Cancel = '-1'
+        SmsSent = '1'
+        OneMoreCode = '3'
+        End = '6'
+        AlreadyUsed = '8'
 
-class Status:
-    Cancel = '-1'
-    SmsSent = '1'
-    OneMoreCode = '3'
-    End = '6'
-    AlreadyUsed = '8'
 
-
-class Operator:
-    MTS = 'mts'
-    Beeline = 'beeline'
+    class Operator:
+        MTS = 'mts'
+        Beeline = 'beeline'
+        Megafon = 'megafon'
+        TELE2 = 'tele2'
