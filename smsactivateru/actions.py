@@ -28,7 +28,7 @@ class GetBalance(ActionsModel):
 class GetFreeSlots(ActionsModel):
 	_name = 'getNumbersStatus'
 
-	def __init__(self, country=None):
+	def __init__(self, country=None, operator=None):
 		super().__init__(inspect.currentframe())
 
 	@error_handler
