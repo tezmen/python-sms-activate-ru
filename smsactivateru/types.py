@@ -43,6 +43,13 @@ class SmsTypes:
 		AR = '39'  # Аргентина (Argentina)
 		UZ = '40'  # Узбекистан (Uzbekistan)
 		CM = '41'  # Камерун (Cameroon)
+		TG = '42'  # Чад (Chad)
+		DE = '43'  # Германия (Germany)
+		LT = '44'  # Литва (Lithuania)
+		HR = '45'  # Хорватия ( Croatia)
+		IQ = '47'  # Ирак (Iraq)
+		NL = '48'  # Нидерланды (Netherlands)
+
 
 	class Status:
 		Cancel = '-1'
