@@ -16,7 +16,7 @@ class GetBalance(ActionsModel):
 
 	@error_handler
 	def __response_processing(self, response):
-		return int(response.split(':')[1])
+		return float(response.split(':')[1])
 
 	def request(self, wrapper):
 		"""
