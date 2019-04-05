@@ -9,7 +9,6 @@ class Sms:
 
 	def request(self, action):
 		try:
-			print(action.data)
 			params = {**{'api_key': self.key}, **action.data}
 			response = requests.get(self.url, params)
 			return response.text
