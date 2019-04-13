@@ -52,7 +52,7 @@ class GetFreeSlots(ActionsModel):
 class GetNumber(ActionsModel):
 	_name = 'getNumber'
 
-	def __init__(self, service, country=None, operator=None, forward=False):
+	def __init__(self, service, country=None, operator=None, forward=False, ref=None):
 		service = getattr(service, '__service_short_name').split('_')[0]
 		forward = int(forward)
 		super().__init__(inspect.currentframe())
