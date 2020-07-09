@@ -8,7 +8,7 @@ class ServiceStorage:
 		'VkCom': 'vk_0', 'Odnoklassniki': 'ok_0', 'Whatsapp': 'wa_0', 'Viber': 'vi_0', 'Telegram': 'tg_0',
 		'WeChat': 'wb_0', 'Google': 'go_0', 'YouTube': 'go_0', 'Gmail': 'go_0', 'Avito': 'av_0',
 		'AvitoSmsForwarding': 'av_1', 'Facebook': 'fb_0', 'Twitter': 'tw_0', 'AnyOther': 'ot_0',
-		'AnyOtherSmsForwarding': 'ot_1',
+		'AnyOtherSmsForwarding': 'ot_1', 'Nike': 'ew_0',
 		'Uber': 'ub_0', 'Qiwi': 'qw_0', 'GettTaxi': 'gt_0', 'OlxUA': 'sn_0', 'Instagram': 'ig_0',
 		'SeoSprint': 'ss_0', 'Youla': 'ym_0', 'YoulaSmsForwarding': 'ym_1', 'MailRu': 'ma_0', 'Microsoft': 'mm_0',
 		'Messenger': 'uk_0', 'LineMessenger': 'me_0', 'Yahoo': 'mb_0', 'DrugVokrug': 'we_0', 'FiveOrochka': 'bd_0',
@@ -132,6 +132,13 @@ class SmsService:
 		:rtype: smsactivateru.models.ServiceModel
 		"""
 		return self._AnyOtherSmsForwarding
+
+	@property
+	def Nike(self):
+		"""
+		:rtype: smsactivateru.models.ServiceModel
+		"""
+		return self._Nike
 
 	@property
 	def Uber(self):
