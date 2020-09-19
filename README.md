@@ -18,7 +18,7 @@ $ git clone https://github.com/tezmen/python-sms-activate-ru
 $ cd python-sms-activate-ru
 $ python setup.py install
 ```
-...or install from source buth with pip
+...or install from source but without pip:
 ```
 $ pip install git+https://github.com/tezmen/python-sms-activate-ru
 ```
@@ -32,7 +32,7 @@ activation = GetNumber(
 	service=SmsService().Youla,
 ).request(wrapper)
 
-input('Press enter if you sms was sent')
+input('Press enter if your sms was sent')
 
 activation.was_sent().request(wrapper)
 code = activation.wait_code(wrapper=wrapper)
