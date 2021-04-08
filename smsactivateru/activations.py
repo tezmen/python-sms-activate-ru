@@ -70,7 +70,7 @@ class SmsActivation:
 				smsactivateru.SetStatus(
 					id=self.id,
 					status=smsactivateru.SmsTypes.Status.OneMoreCode
-				)
+				).request(self.wrapper)
 				break
 		if callback:
 			callback(self.last_code)

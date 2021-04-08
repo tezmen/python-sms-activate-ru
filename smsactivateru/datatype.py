@@ -15,7 +15,7 @@ class SmsTypes:
 		# TZ = '9'  # Танзания (Tanzania) – temp disable
 		VN = '10'  # Вьетнам (Vietnam)
 		KG = '11'  # Кыргызстан (Kyrgyzstan)
-		US = '12'  # США (USA)
+		US_VIRT = '12'  # США ВИРТ (USA)
 		IL = '13'  # Израиль (Israel)
 		HK = '14'  # Гонконг (Hong Kong)
 		PL = '15'  # Польша (Poland)
@@ -49,6 +49,8 @@ class SmsTypes:
 		HR = '45'  # Хорватия ( Croatia)
 		IQ = '47'  # Ирак (Iraq)
 		NL = '48'  # Нидерланды (Netherlands)
+		BR = '73'
+		US = '187' # США
 
 
 	class Status:
