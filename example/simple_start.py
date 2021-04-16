@@ -2,9 +2,10 @@ from smsactivateru import Sms, SmsTypes, SmsService, GetBalance, GetFreeSlots, G
 
 """
 create wrapper with secret api-key
-search here: http://sms-activate.ru/index.php?act=profile)
+search here: http://sms-activate.ru/index.php?act=profile
+             https://5sim.net/settings/security
 """
-wrapper = Sms('API KEY')
+wrapper = Sms('API KEY', 'http://sms-activate.api.5sim.net/stubs/handler_api.php')
 
 # ------------------------------ #
 

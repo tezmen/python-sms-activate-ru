@@ -26,7 +26,7 @@ $ pip install git+https://github.com/tezmen/python-sms-activate-ru
 ```python
 from smsactivateru import Sms, SmsService, GetNumber
 
-wrapper = Sms('API KEY')
+wrapper = Sms('API KEY', 'http://sms-activate.api.5sim.net/stubs/handler_api.php')
 
 activation = GetNumber(
 	service=SmsService().Youla,
@@ -38,7 +38,8 @@ activation.was_sent().request(wrapper)
 code = activation.wait_code(wrapper=wrapper)
 print(code)
 ```
-More examples located in /example/ dir
+
+More examples located in /example/
 
 ----
 Библиотека на python для работы с api сервиса автоматического приёма смс – sms-activate.ru
@@ -78,3 +79,4 @@ print(code)
 ```
 Это пример использует встроенный обработчик. Вы можете вручную устанавливать статусы и управлять процессом, а так же много чего ещё.
 Больше примеров находится в папке /example/
+
