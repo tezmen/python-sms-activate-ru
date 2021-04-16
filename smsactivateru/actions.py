@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 import inspect
-from .models import ActionsModel
-from .errors import error_handler
-from .services import SmsService, ServiceStorage
-from .activations import SmsActivation
 import json
+
+from .activations import SmsActivation
+from .errors import error_handler
+from .models import ActionsModel
+from .services import SmsService, ServiceStorage
 
 
 class GetBalance(ActionsModel):
@@ -15,7 +16,7 @@ class GetBalance(ActionsModel):
 
 	@error_handler
 	def __response_processing(self, response):
-		return int(str(response.split(':')[1]).split('.', 1)[0])
+		return float(response.split(':')[1])
 
 	def request(self, wrapper):
 		"""
@@ -28,7 +29,7 @@ class GetBalance(ActionsModel):
 class GetFreeSlots(ActionsModel):
 	_name = 'getNumbersStatus'
 
-	def __init__(self, country=None):
+	def __init__(self, country=None, operator=None):
 		super().__init__(inspect.currentframe())
 
 	@error_handler
@@ -60,16 +61,16 @@ class GetNumber(ActionsModel):
 		super().__init__(inspect.currentframe())
 
 	@error_handler
-	def __response_processing(self, response):
+	def __response_processing(self, response, wrapper):
 		data = response.split(':')
-		return SmsActivation(data[1], data[2])
+		return SmsActivation(data[1], data[2], wrapper)
 
 	def request(self, wrapper):
 		"""
 		:rtype: smsactivateru.activations.SmsActivation
 		"""
 		response = wrapper.request(self)
-		return self.__response_processing(response)
+		return self.__response_processing(response, wrapper=wrapper)
 
 
 class GetStatus(ActionsModel):
@@ -82,8 +83,8 @@ class GetStatus(ActionsModel):
 	def __response_processing(self, response):
 		data = {'status': response, 'code': None}
 		if ':' in response:
-			data['status'] = response.split(':')[0]
-			data['code'] = response.split(':')[1]
+			data['status'] = response.split(':', 1)[0]
+			data['code'] = response.split(':', 1)[1]
 		return data
 
 	def request(self, wrapper):

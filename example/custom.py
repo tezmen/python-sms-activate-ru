@@ -1,3 +1,4 @@
+import time
 from smsactivateru import Sms, SmsTypes, SmsService, GetBalance, GetFreeSlots, GetNumber, SetStatus, GetStatus
 
 """
@@ -42,7 +43,7 @@ if user_action == 'cancel':
 		status=SmsTypes.Status.Cancel
 	).request(wrapper)
 	print(set_as_cancel)
-	exit()
+	exit(1)
 
 # set current activation status as SmsSent (code was sent to phone)
 set_as_sent = SetStatus(
@@ -53,6 +54,7 @@ print(set_as_sent)
 
 # .. wait code
 while True:
+	time.sleep(1)
 	response = GetStatus(id=activation.id).request(wrapper)
 	if response['code']:
 		print('Your code:{}'.format(response['code']))

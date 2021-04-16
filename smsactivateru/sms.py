@@ -8,6 +8,9 @@ class Sms:
 		self.url = api_url
 
 	def request(self, action):
-		params = {**{'api_key': self.key}, **action.data}
-		response = requests.get(self.url, params)
-		return response.text
+		try:
+			params = {**{'api_key': self.key}, **action.data}
+			response = requests.get(self.url, params)
+			return response.text
+		except (ConnectionError, TimeoutError):
+			return 'NO_CONNECTION'

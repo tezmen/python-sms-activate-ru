@@ -11,9 +11,11 @@ class ServiceStorage:
 		'AnyOtherSmsForwarding': 'ot_1',
 		'Uber': 'ub_0', 'Qiwi': 'qw_0', 'GettTaxi': 'gt_0', 'OlxUA': 'sn_0', 'Instagram': 'ig_0',
 		'SeoSprint': 'ss_0', 'Youla': 'ym_0', 'YoulaSmsForwarding': 'ym_1', 'MailRu': 'ma_0', 'Microsoft': 'mm_0',
-		'MeetMe': 'uk_0', 'LineMessenger': 'me_0', 'Yahoo': 'mb_0', 'DrugVokrug': 'we_0', 'Rambler': 'bd_0',
-		'TencentQQ': 'kp_0', 'TaxiMaxim': 'dt_0', 'Yandex': 'ya_0', 'YandexSmsForwarding': 'ya_1', 'Skout': 'mt_0',
-		'Nimses': 'oi_0', 'GetResponseRu': 'fd_0', 'DromRu': 'zz_0', 'KakaoTalk': 'kt_0', 'ProtonMail': 'pm_0'}
+		'Messenger': 'uk_0', 'LineMessenger': 'me_0', 'Yahoo': 'mb_0', 'DrugVokrug': 'we_0', 'FiveOrochka': 'bd_0',
+		'TencentQQ': 'kp_0', 'WOG': 'dt_0', 'Yandex': 'ya_0', 'YandexSmsForwarding': 'ya_1', 'Steam': 'mt_0',
+		'Tinder': 'oi_0', 'Mamba': 'fd_0', 'DromRu': 'zz_0', 'KakaoTalk': 'kt_0', 'AOL': 'pm_0', 'LinkedIN': 'tn_0',
+		'DeliveryClub': 'dt_0',
+	}
 
 
 class SmsService:
@@ -202,11 +204,11 @@ class SmsService:
 		return self._Microsoft
 
 	@property
-	def MeetMe(self):
+	def Messenger(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._MeetMe
+		return self._Messenger
 
 	@property
 	def LineMessenger(self):
@@ -230,11 +232,11 @@ class SmsService:
 		return self._DrugVokrug
 
 	@property
-	def Rambler(self):
+	def FiveOrochka(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._Rambler
+		return self._FiveOrochka
 
 	@property
 	def TencentQQ(self):
@@ -244,11 +246,11 @@ class SmsService:
 		return self._TencentQQ
 
 	@property
-	def TaxiMaxim(self):
+	def WOG(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._TaxiMaxim
+		return self._WOG
 
 	@property
 	def Yandex(self):
@@ -265,25 +267,25 @@ class SmsService:
 		return self._YandexSmsForwarding
 
 	@property
-	def Skout(self):
+	def Steam(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._Skout
+		return self._Steam
 
 	@property
-	def Nimses(self):
+	def Tinder(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._Nimses
+		return self._Tinder
 
 	@property
-	def GetResponseRu(self):
+	def Mamba(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._GetResponseRu
+		return self._Mamba
 
 	@property
 	def DromRu(self):
@@ -300,8 +302,22 @@ class SmsService:
 		return self._KakaoTalk
 
 	@property
-	def ProtonMail(self):
+	def AOL(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
 		"""
-		return self._ProtonMail
+		return self._AOL
+
+	@property
+	def LinkedIN(self):
+		"""
+		:rtype: smsactivateru.models.ServiceModel
+		"""
+		return self._LinkedIN
+
+	@property
+	def DeliveryClub(self):
+		"""
+		:rtype: smsactivateru.models.ServiceModel
+		"""
+		return self._DeliveryClub

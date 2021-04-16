@@ -1,12 +1,20 @@
 # -*- coding: utf-8 -*-
+from os import path
 from setuptools import setup
 
 """
 @author: tezmen
 @contact: https://t.me/tezmen
 @license Apache License, Version 2.0, see LICENSE file
-Copyright (C) 2017
+Copyright (C) 2018
 """
+
+
+def long_description():
+	"""Build the description from README file """
+	this_dir = path.abspath(path.dirname(__file__))
+	with open(path.join(this_dir, 'README.md'), encoding='utf-8') as f:
+		return f.read()
 
 
 def requirements():
@@ -17,10 +25,13 @@ def requirements():
 			requirements_list.append(install.strip())
 	return requirements_list
 
+
 setup(
 	name='smsactivateru',
-	version='1.0',
-	description='Wrapper for automatic reception of SMS-messages with sms-activate.ru API',
+	version='1.2.6',
+	long_description=long_description(),
+	long_description_content_type='text/markdown',
+	description='Wrapper for automatic reception of SMS-messages by sms-activate.ru',
 	author='tezmen',
 	license='Apache License, Version 2.0, see LICENSE file',
 	keywords='sms, revice, sms-activate-ru, autoreg',
@@ -37,6 +48,7 @@ setup(
 		'Programming Language :: Python',
 		'Programming Language :: Python :: 3.5',
 		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.7',
 		'Programming Language :: Python :: Implementation :: PyPy',
 	]
 )

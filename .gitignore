@@ -1,9 +1,9 @@
 .DS_Store
 __pycache__
-smsactivateru/__pycache__
 .idea
 build/
 dist/
 *.pyc
 .pypirc
 *.egg-info
+/venv
