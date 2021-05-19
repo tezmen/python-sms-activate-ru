@@ -68,7 +68,6 @@ class GetNumber(ActionsModel):
 		"""
 		response = wrapper.request(self)
 		return self.__response_processing(response, wrapper=wrapper)
-https://sms-activate.ru/stubs/handler_api.php?api_key=$api_key&action=getFullSms&id=$id
 	
 
 class GetStatus(ActionsModel):
@@ -93,7 +92,7 @@ class GetStatus(ActionsModel):
 		return self.__response_processing(response)
 
 	
-class FetFullSms(ActionsModel):
+class GetFullSms(ActionsModel):
 	_name = 'getFullSms'
 
 	def __init__(self, id):
