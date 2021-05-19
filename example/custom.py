@@ -3,7 +3,7 @@ from smsactivateru import Sms, SmsTypes, SmsService, GetBalance, GetFreeSlots, G
 
 """
 create wrapper with secret api-key
-search here: http://sms-activate.ru/index.php?act=profile)
+search here: http://activation.pw/api)
 """
 wrapper = Sms('API KEY')
 
