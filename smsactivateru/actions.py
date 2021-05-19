@@ -68,7 +68,8 @@ class GetNumber(ActionsModel):
 		"""
 		response = wrapper.request(self)
 		return self.__response_processing(response, wrapper=wrapper)
-
+https://sms-activate.ru/stubs/handler_api.php?api_key=$api_key&action=getFullSms&id=$id
+	
 
 class GetStatus(ActionsModel):
 	_name = 'getStatus'
@@ -78,7 +79,29 @@ class GetStatus(ActionsModel):
 
 	@error_handler
 	def __response_processing(self, response):
-		data = {'status': response, 'code': None}
+		data = {'status': response, 'code': None, 'response':response}
+		if ':' in response:
+			data['status'] = response.split(':', 1)[0]
+			data['code'] = response.split(':', 1)[1]
+		return data
+
+	def request(self, wrapper):
+		"""
+		:rtype: dict
+		"""
+		response = wrapper.request(self)
+		return self.__response_processing(response)
+
+	
+class FetFullSms(ActionsModel):
+	_name = 'getFullSms'
+
+	def __init__(self, id):
+		super().__init__(inspect.currentframe())
+
+	@error_handler
+	def __response_processing(self, response):
+		data = {'status': response, 'code': None, 'response':response}
 		if ':' in response:
 			data['status'] = response.split(':', 1)[0]
 			data['code'] = response.split(':', 1)[1]
