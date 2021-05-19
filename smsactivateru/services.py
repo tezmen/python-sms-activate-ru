@@ -14,7 +14,7 @@ class ServiceStorage:
 		'Messenger': 'uk_0', 'LineMessenger': 'me_0', 'Yahoo': 'mb_0', 'DrugVokrug': 'we_0', 'FiveOrochka': 'bd_0',
 		'TencentQQ': 'kp_0', 'WOG': 'dt_0', 'Yandex': 'ya_0', 'YandexSmsForwarding': 'ya_1', 'Steam': 'mt_0',
 		'Tinder': 'oi_0', 'Mamba': 'fd_0', 'DromRu': 'zz_0', 'KakaoTalk': 'kt_0', 'AOL': 'pm_0', 'LinkedIN': 'tn_0',
-		'DeliveryClub': 'dt_0',
+		'DeliveryClub': 'dt_0', 'Craigslist': 'wc_0'
 	}
 
 
@@ -56,6 +56,13 @@ class SmsService:
 		"""
 		return self._Viber
 
+	@property
+	def Craigslist(self):
+		"""
+		:rtype: smsactivateru.models.ServiceModel
+		"""
+		return self._Craigslist	
+	
 	@property
 	def Telegram(self):
 		"""
