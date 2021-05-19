@@ -58,6 +58,8 @@ class SmsActivation:
 			if counter >= timeout:
 				raise ('Timeout error')
 			response = smsactivateru.GetStatus(id=self.id).request(self.wrapper)
+			if not response['code'] and response['status'] == "STATUS_OK":
+				response = smsactivateru.GetFullSms(id=self.id).request(self.wrapper)
 			if response['code'] and not not_end and response['code'] != self.last_code:
 				self.__last_code = response['code']
 				smsactivateru.SetStatus(
