@@ -75,9 +75,9 @@ class SmsActivation:
 				).request(self.wrapper)
 				break
 		if callback:
-			callback(self.last_code)
+			callback(self.last_code.strip())
 		else:
-			return self.last_code
+			return self.last_code.strip()
 
 	@property
 	def id(self):
