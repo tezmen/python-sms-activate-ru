@@ -281,6 +281,13 @@ class SmsService:
 		return self._Steam
 
 	@property
+	def Offerup(self):
+		"""
+		:rtype: smsactivateru.models.ServiceModel
+		"""
+		return self._Offerup
+	
+	@property
 	def Tinder(self):
 		"""
 		:rtype: smsactivateru.models.ServiceModel
