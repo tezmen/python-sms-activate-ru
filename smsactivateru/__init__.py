@@ -6,5 +6,5 @@ from .services import SmsService
 from .activations import SmsActivation
 
 __author__ = 'tezmen'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 __contact__ = 'https://t.me/tezmen'
