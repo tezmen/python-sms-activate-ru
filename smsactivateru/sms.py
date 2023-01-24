@@ -5,7 +5,7 @@ import requests
 class Sms:
 	def __init__(self, api_key):
 		self.key = api_key
-		self.url = 'http://sms-activate.ru/stubs/handler_api.php'
+		self.url = 'https://api.sms-activate.org/stubs/handler_api.php'
 
 	def request(self, action):
 		try:
