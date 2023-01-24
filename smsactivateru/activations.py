@@ -79,7 +79,7 @@ class SmsActivation:
         else:
             return self.last_code.strip()
 
-    def wait_text(self, timeout=1200, callback=None, not_end=False, args, *kwargs):
+    def wait_text(self, timeout=1200, callback=None, not_end=False, *args, **kwargs):
         """
         :param wrapper: obj for work with sms-activate
         :param timeout: timeout waiting of code from sms in secs. 1200 - 20 min, this is max time of a live session.
@@ -110,7 +110,6 @@ class SmsActivation:
                     status=smsactivateru.SmsTypes.Status.OneMoreCode
                 ).request(self.wrapper)
                 break
-
         if callback:
             callback(self.last_code.strip())
         else:
